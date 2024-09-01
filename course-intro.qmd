@@ -14,13 +14,13 @@ jupyter: python3
 
     1. Apply for [github education](https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-education-for-students/apply-to-github-education-as-a-student){target="_blank"} access for students. This should give you free codespaces usage allowance (180 core hours/month) as well as Copilot access.
 
-    1. Create a codespace from my [template] (https://github.com/shleeneu/codespaces_template_public){target="_blanK"}. Wait for it to finish setting up (10-15 min). This is where you will be coding this semester. Note: GitHub codespaces is fully online and accessible through your browser. You are welcome to install/use VS Code and quarto on your own computer if you prefer, but we will provide technical support for GitHub codespaces only.
+    1. Create a codespace from my [template](https://github.com/shleeneu/codespaces_template_public){target="_blank"}. Wait for it to finish setting up (10-15 min). This is where you will be coding this semester. Note: GitHub codespaces is fully online and accessible through your browser. You are welcome to install/use VS Code and quarto on your own computer if you prefer, but we will provide technical support for GitHub codespaces only.
     
     1. You should be able to create a new file by copying and pasting the starter file provided on canvas. You will work on this starter file to complete homework assignments.
 
     1. Remember to always __commit__ and __push__ changes made to the file, so they are saved to your github repo. Othrwise, they will be lost once the codespace is stopped/deleted!
 
-    1. Make sure to set your Codespaces [spending limit](https://github.com/settings/billing/spending_limit){target="_blanK"} as $0.00 to avoid being charged. You should stop your codespace when not working.
+    1. Make sure to set your Codespaces [spending limit](https://github.com/settings/billing/spending_limit){target="_blank"} as $0.00 to avoid being charged. You should stop your codespace when not working.
     
 
 # Coding Overview
