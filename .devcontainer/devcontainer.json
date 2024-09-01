@@ -37,7 +37,8 @@
 		"vscode": {
 			"extensions": [
 				"quarto.quarto",
-				"ms-toolsai.jupyter"
+				"ms-toolsai.jupyter",
+				"ms-toolsai.datawrangler"
 			],
 			"settings": {
 				
