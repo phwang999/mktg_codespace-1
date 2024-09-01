@@ -1,0 +1,120 @@
+---
+title: "MKTG Marketing Analytics"
+format:
+  html:
+    code-fold: false
+jupyter: python3
+---
+
+# Course Introduction
+
+
+1. Technology setup
+    1. Create a [github](https://github.com/){target="_blank"} account if you don't have one.
+
+    1. Apply for [github education](https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-education-for-students/apply-to-github-education-as-a-student){target="_blank"} access for students. This should give you free codespaces usage allowance (180 core hours/month) as well as Copilot access.
+
+    1. Create a codespace from my [template] (https://github.com/shleeneu/codespaces_template_public){target="_blanK"}. Wait for it to finish setting up (10-15 min). This is where you will be coding this semester. Note: GitHub codespaces is fully online and accessible through your browser. You are welcome to install/use VS Code and quarto on your own computer if you prefer, but we will provide technical support for GitHub codespaces only.
+    
+    1. You should be able to create a new file by copying and pasting the starter file provided on canvas. You will work on this starter file to complete homework assignments.
+
+    1. Remember to always __commit__ and __push__ changes made to the file, so they are saved to your github repo. Othrwise, they will be lost once the codespace is stopped/deleted!
+
+    1. Make sure to set your Codespaces [spending limit](https://github.com/settings/billing/spending_limit){target="_blanK"} as $0.00 to avoid being charged. You should stop your codespace when not working.
+    
+
+# Coding Overview
+
+- For marketing analytics, we need a way to
+    - analyze data => python
+    - store and represent data => use Dataframe
+    - plot data => visualization
+    - report results => Quarto
+- We will mainly use **polars** to store and manipulate dataframes
+    - Another popular but much older/slower library is **pandas**, which we might use from time to time
+    - Latest development: polars >> pandas
+- We will use packages such as **plotly** to visualize results
+- We will use github to do version control. See [tutorial](https://docs.github.com/en/get-started/start-your-journey/hello-world){target="_blank"}
+- We will also use jupyter notebook files (.ipynb) for demos and quick experimentations. But please make sure assignments are written in quarto (.qmd) and exported as html.
+
+## Quarto Tutorial
+
+- Quarto is an open-source scientific and technical publishing system
+- The current webpage is written in Quarto
+- Can easily create documents (e.g., PDF, HTML), presentations, and websites
+- We will use Quarto for writing homework assignments
+- See [cheatsheet](https://rstudio.github.io/cheatsheets/quarto.pdf) to see what it's capable of 
+- Quarto uses the markdown syntax to control how text and code are rendered. See [cheatsheet](https://images.datacamp.com/image/upload/v1697798108/Markdown_Cheat_Sheet_9657d9746f.png) for reference.
+
+
+## Python Tutorial
+
+
+```{python}
+x = 1
+x
+
+```
+
+### Example from Quarto website
+
+For a demonstration of a simple line plot using plotly, see @fig-line.
+
+
+```{python}
+#| label: fig-line
+#| fig-cap: "A simple line plot using plotly"
+
+import plotly.graph_objects as go
+
+# Generate sample data
+x = [1, 2, 3, 4, 5]
+y = [10, 15, 13, 17, 14]
+
+# Create a line chart
+fig = go.Figure()
+
+fig.add_trace(go.Scatter(
+    x=x, y=y,
+    mode='lines+markers',
+    name='Line Plot',
+    line=dict(color='royalblue', width=2),
+    marker=dict(color='royalblue', size=8)
+))
+
+# Customize the layout
+fig.update_layout(
+    title='Simple Line Chart',
+    xaxis_title='X Axis',
+    yaxis_title='Y Axis',
+    template='plotly_white'
+)
+
+# Show plot
+fig.show()
+
+```
+
+## Sample polars code
+
+- See [here](https://docs.pola.rs/user-guide/getting-started/){target="_blank"} for documentation
+
+```{python}
+import polars as pl
+from datetime import datetime
+
+df = pl.DataFrame(
+    {
+        "integer": [1, 2, 3],
+        "date": [
+            datetime(2025, 1, 1),
+            datetime(2025, 1, 2),
+            datetime(2025, 1, 3),
+        ],
+        "float": [4.0, 5.0, 6.0],
+        "string": ["a", "b", "c"],
+    }
+)
+
+print(df)
+```
