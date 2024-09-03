@@ -3,11 +3,13 @@ title: "MKTG Marketing Analytics"
 format:
   html:
     code-fold: false
+    embed-resources: true
 jupyter: python3
 ---
 
 # Course Introduction
 
+Your name:
 
 1. Technology setup
     1. Create a [github](https://github.com/){target="_blank"} account if you don't have one.
@@ -16,9 +18,13 @@ jupyter: python3
 
     1. Create a codespace from my [template](https://github.com/shleeneu/mktg_codespace){target="_blank"}. Wait for it to finish setting up (10-15 min). This is where you will be coding this semester. Note: GitHub codespaces is fully online and accessible through your browser. You are welcome to install/use VS Code and quarto on your own computer if you prefer, but we will provide technical support for GitHub codespaces only.
     
-    1. You should be able to create a new file by copying and pasting the starter file provided on canvas. You will work on this starter file to complete homework assignments.
+    1. You should be able to edit this file. For example, include your name in Line 12.
+
+    1. This file is now modified. All modifications need to be __committed__ and __pushed__ for them to be saved. We will push the changes to a __private__ repo named 'mktg_assignment'. Make sure you set the repo as private -- otherwise anyone online can see your private files!
 
     1. Remember to always __commit__ and __push__ changes made to the file, so they are saved to your github repo. Othrwise, they will be lost once the codespace is stopped/deleted!
+
+    1. This file is called a quarto file. Try to __preview__ this file -- you will see an html webpage. This is how you can generate an html report from a qmd file.
 
     1. Make sure to set your Codespaces [spending limit](https://github.com/settings/billing/spending_limit){target="_blank"} as $0.00 to avoid being charged. You should stop your codespace when not working.
     
