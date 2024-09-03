@@ -20,7 +20,7 @@ Your name:
     
     1. You should be able to edit this file. For example, include your name in Line 12.
 
-    1. This file is now modified. All modifications need to be __committed__ and __pushed__ for them to be saved. We will push the changes to a __private__ repo named 'mktg_assignment'. Make sure you set the repo as private -- otherwise anyone online can see your private files!
+    1. This file is now modified. All modifications need to be __committed__ and __pushed__ for them to be saved. We will push the changes to a __private__ repo named 'mktg_codespace'. Make sure you set the repo as private -- otherwise anyone online can see your private files!
 
     1. Remember to always __commit__ and __push__ changes made to the file, so they are saved to your github repo. Othrwise, they will be lost once the codespace is stopped/deleted!
 
