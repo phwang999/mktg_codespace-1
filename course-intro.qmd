@@ -9,7 +9,7 @@ jupyter: python3
 ---
 # Course Introduction
 
-Your name:
+Your name: Peter Hwang
 
 1. Technology setup
     1. Create a [github](https://github.com/){target="_blank"} account if you don't have one.
