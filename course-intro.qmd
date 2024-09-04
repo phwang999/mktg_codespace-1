@@ -4,9 +4,9 @@ format:
   html:
     code-fold: false
     embed-resources: true
+    number-sections: true
 jupyter: python3
 ---
-
 # Course Introduction
 
 Your name:
@@ -43,7 +43,7 @@ Your name:
 - We will use github to do version control. See [tutorial](https://docs.github.com/en/get-started/start-your-journey/hello-world){target="_blank"}
 - We will also use jupyter notebook files (.ipynb) for demos and quick experimentations. But please make sure assignments are written in quarto (.qmd) and exported as html.
 
-## Quarto Tutorial
+# Quarto Tutorial
 
 - Quarto is an open-source scientific and technical publishing system
 - The current webpage is written in Quarto
@@ -53,55 +53,293 @@ Your name:
 - Quarto uses the markdown syntax to control how text and code are rendered. See [cheatsheet](https://images.datacamp.com/image/upload/v1697798108/Markdown_Cheat_Sheet_9657d9746f.png) for reference.
 
 
-## Python Tutorial
+# Python Tutorial
 
+## Variables
 
 ```{python}
-x = 1
-x
+# Variables are used to store data in memory
+a = 10
+b = 5.5
+c = "Hello, Python!"
+print(a, b, c)
 
 ```
 
-### Example from Quarto website
+## Comments
 
-For a demonstration of a simple line plot using plotly, see @fig-line.
+Comments are lines in your code that Python ignores during execution. They are used to explain code, make notes for yourself or others, and help make your code more readable. Comments start with a `#` symbol.
+
+```{python}
+# This is a comment explaining the next line of code
+x = 42  # You can also place comments at the end of a line
+print(x)
+```
+
+
+## Data Types
+
+Python supports multiple data types including integers, floats, strings, and booleans.
+
+```{python}
+x = 42  # integer
+y = 3.14  # float
+z = "Python"  # string
+flag = True  # boolean
+
+print(type(x), type(y), type(z), type(flag))
+```
+
+
+## Boolean Comparisons
+
+Boolean comparisons evaluate conditions and return True or False. These are essential in decision-making structures like if statements.
+
+Comparison Operators:
+==: Equal to
+!=: Not equal to
+>: Greater than
+<: Less than
+>=: Greater than or equal to
+<=: Less than or equal to
+
+```{python}
+x = 10
+y = 20
+print(x == y)  # False
+print(x < y)   # True
+
+```
+
+### Logical Operators
+
+and: Both conditions must be True
+or: At least one condition must be True
+not: Reverses the condition
+
+```{python}
+a = 5
+b = 15
+print(a > 0 and b > 10)  # True
+print(a > 10 or b > 10)  # True
+print(not a > 0)         # False
+
+```
+
+
+## Lists
+
+Lists are ordered, mutable collections of items
+
+```{python}
+my_list = [1, 2, 3, 4, 5]
+print(my_list)
+
+# Accessing elements
+print(my_list[0])  # First element
+print(my_list[-1])  # Last element
+```
+
+### List comprehension
+
+List comprehension provides a concise way to create lists
+
+```{python}
+squares = [x**2 for x in range(6)]
+print(squares)
+```
+
+## Dictionaries
+
+Dictionaries store key-value pairs
+
+```{python}
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+print(my_dict)
+
+# Accessing values by key
+print(my_dict["name"])
+```
+
+
+## Conditional Statements
+
+We use if-else, or if-elif-else to control the flow of the program.
+
+```{python}
+x = 10
+
+if x > 10:
+    print("x is greater than 10")
+elif x == 10:
+    print("x is equal to 10")
+else:
+    print("x is less than 10")
+
+```
+
+
+## While Loop
+
+The while loop runs as long as a condition is true.
+
+```{python}
+counter = 0
+while counter < 5:
+    print("Counter:", counter)
+    counter += 1
+```
+
+
+## For Loop
+
+A `for` loop in Python allows you to iterate over elements of a sequence (like a list, string, or tuple). There are two common ways to iterate over a sequence: **iteration by value** and **iteration by position**.
+
+### Type 1: Iteration by value
+
+```{python}
+# Example: Iteration by value
+fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:
+    print(fruit)
+
+```
+
+### Type 2: Iteration by position
+
+```{python}
+fruits = ["apple", "banana", "cherry"]
+
+for i in range(len(fruits)):
+    print(f"Index {i}: {fruits[i]}")
+```
+
+
+## Functions
+
+Functions are reusable blocks of code that perform specific tasks, helping to organize and simplify your programs. By using functions, you can avoid repetition, break down complex problems, and improve code clarity. Functions accept inputs (arguments) and can return outputs, making them essential for writing efficient, modular, and maintainable code.
+
+```{python}
+def greet(name):
+    return f"Hello, {name}!"
+
+# Calling the function
+message = greet("Python Learner")
+print(message)
+```
+
+
+## F-string
+
+The sample function code above contains the use of f-strings. F-strings (formatted string literals) make string formatting easier and more readable
+
+```{python}
+name = "Alice"
+age = 30
+
+# Using an f-string to insert variables into a string
+greeting = f"My name is {name} and I am {age} years old."
+print(greeting)
+
+# You can also perform expressions inside an f-string
+calculation = f"5 + 3 = {5 + 3}"
+print(calculation)
+
+# You can even format numbers, for example rounding to two decimal places
+pi = 3.14159
+formatted_pi = f"Pi rounded to two decimal places is {pi:.2f}"
+print(formatted_pi)
+
+
+# Example of a function call inside an f-string
+def double(x):
+    return x * 2
+
+number = 7
+print(f"The double of {number} is {double(number)}")
+
+```
+
+
+
+## Indentation in Python
+
+Python uses **indentation** to define the structure of code, rather than curly braces `{}` like in other programming languages. Consistent indentation is crucial for defining code blocks such as loops, functions, and conditionals.
+
+Below is an example of proper indentation:
+
+```{python}
+# Example of proper indentation in a function
+def greet(name):
+    # The following line is indented, marking it as part of the function
+    print(f"Hello, {name}!")
+
+# Calling the function
+greet("Alice")
+```
+
+Indentation is also used in conditionals and loops:
+
+```{python}
+x = 10
+if x > 5:
+    print("x is greater than 5")  # Indented properly
+    if x > 8:
+        print("x is also greater than 8")  # Nested indentation
+else:
+    print("x is 5 or less")
+```
+
+
+## Type Casting
+
+Type casting is the process of converting one data type into another. This is useful when you need to interact with different types of data.
+
+```{python}
+
+# Converting between types
+x = "10"  # x is a string
+y = int(x)  # Now y is an integer
+
+print(type(x), type(y))
+```
+
+
+
+## Exception Handling (Try-Except)
+
+Exception handling allows you to manage errors gracefully and prevent your program from crashing. The try-except block lets you catch and handle exceptions.
+
+```{python}
+
+# Example of exception handling
+try:
+    result = 10 / 0  # This will raise a ZeroDivisionError
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+```
+
+
+
+
+# Plotly Example from Quarto website
+
+We will be using plotly for visualization.
+For a demonstration of a simple scatter plot using plotly, see @fig-line.
 
 
 ```{python}
 #| label: fig-line
 #| fig-cap: "A simple line plot using plotly"
-
-import plotly.graph_objects as go
-
-# Generate sample data
-x = [1, 2, 3, 4, 5]
-y = [10, 15, 13, 17, 14]
-
-# Create a line chart
-fig = go.Figure()
-
-fig.add_trace(go.Scatter(
-    x=x, y=y,
-    mode='lines+markers',
-    name='Line Plot',
-    line=dict(color='royalblue', width=2),
-    marker=dict(color='royalblue', size=8)
-))
-
-# Customize the layout
-fig.update_layout(
-    title='Simple Line Chart',
-    xaxis_title='X Axis',
-    yaxis_title='Y Axis',
-    template='plotly_white'
-)
-
-# Show plot
+import plotly.express as px
+df = px.data.iris()
+fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species")
 fig.show()
 
 ```
 
-## Sample polars code
+# Sample polars code
 
 - See [here](https://docs.pola.rs/user-guide/getting-started/){target="_blank"} for documentation
 
