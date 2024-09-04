@@ -96,12 +96,13 @@ print(type(x), type(y), type(z), type(flag))
 Boolean comparisons evaluate conditions and return True or False. These are essential in decision-making structures like if statements.
 
 Comparison Operators:
-==: Equal to
-!=: Not equal to
->: Greater than
-<: Less than
->=: Greater than or equal to
-<=: Less than or equal to
+
+- == Equal to
+- != Not equal to
+- \> Greater than
+- < Less than
+- \>= Greater than or equal to
+- <= Less than or equal to
 
 ```{python}
 x = 10
@@ -113,9 +114,9 @@ print(x < y)   # True
 
 ### Logical Operators
 
-and: Both conditions must be True
-or: At least one condition must be True
-not: Reverses the condition
+- and: Both conditions must be True
+- or: At least one condition must be True
+- not: Reverses the condition
 
 ```{python}
 a = 5
@@ -323,7 +324,7 @@ except ZeroDivisionError:
 
 
 
-# Plotly Example from Quarto website
+# Plotly Example
 
 We will be using plotly for visualization.
 For a demonstration of a simple scatter plot using plotly, see @fig-line.
