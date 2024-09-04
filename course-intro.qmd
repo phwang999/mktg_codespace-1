@@ -18,7 +18,7 @@ Your name:
 
     1. Create a codespace from my [template](https://github.com/shleeneu/mktg_codespace){target="_blank"}. Wait for it to finish setting up (10-15 min). This is where you will be coding this semester. Note: GitHub codespaces is fully online and accessible through your browser. You are welcome to install/use VS Code and quarto on your own computer if you prefer, but we will provide technical support for GitHub codespaces only.
     
-    1. You should be able to edit this file. For example, include your name in Line 12.
+    1. You should be able to edit this file within GitHub Codespace. For example, include your name in Line 12.
 
     1. This file is now modified. All modifications need to be __committed__ and __pushed__ for them to be saved. We will push the changes to a __private__ repo named 'mktg_codespace'. Make sure you set the repo as private -- otherwise anyone online can see your private files!
 
